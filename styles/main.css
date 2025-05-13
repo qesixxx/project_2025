@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body, html {
+    height: 100%;
+}
+
+.first-block {
+    background-color: #E7E7E7;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.25em 2.7em;
+    background-color: #E7E7E7;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #77b7f7;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.875em;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 1em;
+    position: relative;
+    padding: 0.5em 0;
+    transition: color 0.3s ease;
+    color: #132436;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #77b7f7;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #666;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5em;
+}
+
+.main-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.text-content {
+    max-width: 30em;
+}
+
+.title-1 {
+    font-size: 2.7em;
+    font-weight: bold;
+    color: #555454;
+    margin-bottom: 1.1em;
+    line-height: 1.2;
+    text-align: left;
+    max-width: 13em;
+    
+}
+.title-2{
+    font-size: 0.8em;
+    margin-bottom: 5.5em;
+    color:#132436;
+    font-weight: 200;
+}
+.main-pic {
+    height: 38.5em;
+    width: 34.5em;
+    border-radius: 1.5em;
+    border: 0.1em solid #e05a29;
+    object-fit: cover;
+    margin-left: 2em;
+}
+
+
+.buttons-container {
+    display: flex;
+    gap: 1em; /* Расстояние между кнопками */
+    margin-top: 2em;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8em 4.0em;
+    background-color: #e05a29; /* Оранжевый цвет */
+    color: white;
+    text-decoration: none;
+    border-radius: 2em;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+.btn:hover {
+    background-color: #c04a20; /* Темнее при наведении */
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 0.1em solid #e05a29;
+    color: #e05a29;
+}
+
+.btn-outline:hover {
+    background-color: #e05a29;
+    color: white;
+}
