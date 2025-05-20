@@ -72,6 +72,23 @@
     </div>
 </div>
 
+<div class="fourth-block">
+    <h2 class="our-cats-title">Наши подопечные</h2>
+    <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">Все</button>
+        <button class="filter-btn" data-filter="adult">Взрослые</button>
+        <button class="filter-btn" data-filter="kitten">Котята</button>
+        <button class="filter-btn" data-filter="special">Особенные</button>
+    </div>
+    <div class="cats-grid">
+        <!-- Карточки будут добавляться через JavaScript -->
+    </div>
+    <div class="error-message" style="display: none; color: red; margin-top: 20px;">
+        Не удалось загрузить данные о котиках. Пожалуйста, попробуйте позже.
+    </div>
+</div>
+
+
 
 
 <footer class="footer">
@@ -127,5 +144,6 @@
     </div>
 </footer>
 
+<script src="scripts/loaddata.js"></script>
 </body>
 </html>
