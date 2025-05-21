@@ -658,3 +658,282 @@ body {
     background-color: #e05a29;
     color: white;
 }
+.fifth-block {
+    background-color: #f2ecec;
+    padding: 4em 7em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    color:#132436;
+}
+
+.volunteer-title {
+    font-size: 2.5em;
+    color: #132436;
+    margin-bottom: 1em;
+    text-align: center;
+    font-weight: bold;
+}
+
+.volunteer-container {
+    display: flex;
+    gap: 4em;
+    width: 100%;
+    max-width: 80em;
+}
+
+.volunteer-text {
+    flex: 0 0 40%;
+    color: #555454;
+    line-height: 1.8;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.volunteer-list {
+    margin: 0em 0;
+    padding-left: 1.5em;
+}
+
+.volunteer-list li {
+    margin-bottom: 0.5em;
+}
+
+.volunteer-form-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.volunteer-form {
+    background-color: white;
+    padding: 2em;
+    border-radius: 1.5em;
+    width: 90%;
+    max-width: 50em;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+    text-align: center;
+    color: #132436;
+    margin-bottom: 1.5em;
+    font-size: 1.5em;
+}
+
+.form-group {
+    margin-bottom: 1.5em;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8em;
+    border: 1px solid #ddd;
+    border-radius: 0.8em;
+    font-size: 0.9em;
+    transition: border-color 0.3s ease;
+    font-weight: bold;
+}
+.form-group textarea{
+    resize: none;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #e05a29;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 0.8em;
+    background-color: #e05a29;
+    color: white;
+    border: none;
+    border-radius: 0.8em;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #d04a19;
+}
+
+.required-info {
+    color: red; 
+    font-size: 0.8em;
+    margin-top: 0.3em;
+    display: none;
+}
+
+.form-group.error .required-info {
+    display: inline-block;
+}
+
+.success-message {
+    color: #155724;
+    padding: 1em;
+    border-radius: 0.5em;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 1.5em;
+}
+
+
+.sixth-block {
+    padding: 4em 7em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    color: #132436;
+}
+
+.financial-title {
+    font-size: 2.5em;
+    
+    margin-bottom: 1em;
+    text-align: center;
+    font-weight: bold;
+}
+
+.financial-container {
+    display: flex;
+    gap: 3em;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.financial-text {
+    flex: 0 0 40%; 
+    color: #555454;
+    line-height: 1.8;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding-right: 1em;
+
+}
+
+.financial-list {
+    margin: 1em 0;
+    padding-left: 1.5em;
+}
+
+.financial-donations {
+    flex: 0 0 60%; 
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.donation-card {
+    background-color: transparent;
+    padding: 2em;
+    border-radius: 1.5em;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15); 
+    border: 1px solid #e0e0e0;
+    max-width: 40em;
+}
+
+.donation-title {
+    font-size: 1.2em;
+    color: #132436;
+    margin-bottom: 1em;
+    text-align: center;
+    font-weight: 400;
+}
+
+.donation-options {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    
+}
+
+.donation-option {
+    background-color: #dddcdc;
+    color: #555454;
+    border: none;
+    padding: 0.6em 1.1em;
+    border-radius: 0.1em;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+}
+
+.donation-option:hover {
+    background-color: #e05a29;
+    color: white;
+}
+
+.donate-btn,
+.subscribe-btn {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+
+    width: 35%;
+    padding: 0.7em;
+    font-size: 1em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 2.1em;
+    border-radius: 1.5em;
+    border: none;
+}
+
+.donate-btn {
+    background-color: #e05a29;
+    color: white;
+}
+
+.subscribe-btn {
+    background-color: transparent;
+    color: #e05a29;
+    border: 2px solid #e05a29;
+}
+
+
+.donate-btn::before,
+.subscribe-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    pointer-events: none;
+    opacity: 0;
+    z-index: 0;
+}
+
+.donate-btn:hover::before,
+.subscribe-btn:hover::before {
+    animation: ripple 0.6s ease-out forwards;
+    opacity: 1;
+}
+
+@keyframes ripple {
+    to {
+        transform: translate(-50%, -50%) scale(10);
+        opacity: 0;
+    }
+}
+
+.donate-btn:hover {
+    background-color: #d04a19;
+    transform: translateY(-2px);
+}
+
+.subscribe-btn:hover {
+    background-color: #e05a29;
+    color: #fff;
+}

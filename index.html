@@ -88,7 +88,84 @@
     </div>
 </div>
 
+<div class="fifth-block">
+    <h2 class="volunteer-title">Стать волонтером</h2>
+    <div class="volunteer-container">
+        <div class="volunteer-text">
+            <p>Нам всегда нужна помощь!</p>
+            <p>Волонтеры - это основа нашей организации. Без вас мы не сможем помогать всем нуждающимся котикам.</p>
+            <p>Вы можете помочь разными способами:</p>
+            <ul class="volunteer-list">
+                <li>Передержка кошек (временный дом)</li>
+                <li>Помощь на выставках по пристройству</li>
+                <li>Транспортировка животных к ветеринару</li>
+                <li>Фото и описание котиков для сайта</li>
+                <li>Помощь в социализации животных</li>
+            </ul>
+        </div>
+        <div class="volunteer-form-container">
+            <form class="volunteer-form">
+                <h3 class="form-title">Заполнить анкету</h3>
+                <div class="form-group">
+                    <input type="text" id="name" name="name" placeholder="Ваше имя" required>
+                    <small class="required-info">* Это поле обязательно к заполнению</small>
+                </div>
 
+
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                    <small class="required-info">* Это поле обязательно к заполнению</small>
+                </div>
+                <div class="form-group">
+                    <input type="tel" id="phone" name="phone" placeholder="Телефон" required>
+                    <small class="required-info">* Это поле обязательно к заполнению</small>
+                </div>
+                <div class="form-group">
+                    <textarea id="help" name="help" placeholder="Как вы хотите помочь?" rows="3" ></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Отправить</button>
+
+                <div id="success-message" class="success-message" style="display:none;">
+                     Спасибо! Ваша заявка принята. Мы свяжемся с вами.
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="sixth-block">
+    <h2 class="financial-title">Финансовая помощь</h2>
+    <div class="financial-container">
+        <div class="financial-text">
+            <p>Все собранные средства идут на:</p>
+            <ul class="financial-list">
+                <li>Корм для кошек на передержках</li>
+                <li>Ветеринарное обслуживание</li>
+                <li>Стерилизацию бездомных животных</li>
+                <li>Лечение больных и травмированных кошек</li>
+                <li>Оборудование для временного содержания</li>
+            </ul>
+        </div>
+        <div class="financial-donations">
+            <div class="donation-card">
+                <h3 class="donation-title">Разовое пожертвование</h3>
+                <div class="donation-options">
+                    <button class="donation-option">300₽</button>
+                    <button class="donation-option">500₽</button>
+                    <button class="donation-option">1000₽</button>
+                    <button class="donation-option">Другая сумма</button>
+                </div>
+                <button class="donate-btn">Пожертвовать</button>
+            </div>
+            <div class="donation-card">
+                <h3 class="donation-title">Регулярная помощь</h3>
+                <p class="donation-description">Подписка на ежемесячные пожертвования</p>
+                <button class="subscribe-btn">Оформить подписку</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 <footer class="footer">
@@ -145,5 +222,6 @@
 </footer>
 
 <script src="scripts/loaddata.js"></script>
+<script src="scripts/formscript.js"></script>
 </body>
 </html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Админка — Заявки волонтеров</title>
+    <style>
+        @font-face {
+            font-family: main;
+            src: url(../fonts/Raleway.ttf);
+        }
+        body {
+            font-family: main ;
+            padding: 2em;
+            background-color: #f9f9f9;
+        }
+
+        h1 {
+            text-align: center;
+            color: #132436;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1em;
+            background-color: white;
+        }
+
+        th, td {
+            padding: 1em;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background-color: #e05a29;
+            color: white;
+        }
+
+        .delete-btn {
+            background-color: #d9534f;
+            color: white;
+            border: none;
+            padding: 0.5em 1em;
+            border-radius: 0.3em;
+            cursor: pointer;
+        }
+
+        .delete-btn:hover {
+            background-color: #c9302c;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Заявки волонтеров</h1>
+
+<div id="no-data" style="display:none;">
+    Нет заявок.
+</div>
+
+<table id="applications-table" style="display:none;">
+    <thead>
+        <tr>
+            <th>Имя</th>
+            <th>Email</th>
+            <th>Телефон</th>
+            <th>Как хочет помочь</th>
+            <th>Дата</th>
+            <th>Действия</th>
+        </tr>
+    </thead>
+    <tbody id="applications-body">
+        <!-- Сюда будут подставляться строки -->
+    </tbody>
+</table>
+
+<script>
+    const applications = JSON.parse(localStorage.getItem('volunteerApplications')) || [];
+
+    const table = document.getElementById('applications-table');
+    const noData = document.getElementById('no-data');
+    const tbody = document.getElementById('applications-body');
+
+    if (applications.length === 0) {
+        noData.style.display = 'block';
+    } else {
+        table.style.display = 'table';
+
+        applications.forEach((app, index) => {
+            const tr = document.createElement('tr');
+
+            tr.innerHTML = `
+                <td>${app.name}</td>
+                <td>${app.email || '-'}</td>
+                <td>${app.phone}</td>
+                <td>${app.help || '-'}</td>
+                <td>${new Date(app.timestamp).toLocaleString()}</td>
+                <td>
+                    <button class="delete-btn" onclick="deleteApplication(${index})">Удалить</button>
+                </td>
+            `;
+
+            tbody.appendChild(tr);
+        });
+    }
+
+    function deleteApplication(index) {
+        if (!confirm('Вы уверены, что хотите удалить эту заявку?')) return;
+
+        const updated = applications.filter((_, i) => i !== index);
+        localStorage.setItem('volunteerApplications', JSON.stringify(updated));
+        location.reload();
+    }
+</script>
+
+</body>
+</html>
