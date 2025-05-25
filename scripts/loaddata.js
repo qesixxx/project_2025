@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const filterButtons = document.querySelectorAll('.filter-btn');
     const errorMessage = document.querySelector('.error-message');
 
-    const GIST_URL = 'https://gist.githubusercontent.com/qesixxx/78358c2e5ffd5e76654f8b958e9e1313/raw/d26ea84c417ab4957c8a68fb868044c29f16d165/cats.json';
+    const GIST_URL = 'https://gist.githubusercontent.com/qesixxx/78358c2e5ffd5e76654f8b958e9e1313/raw/0ccaa74e09e7124a0c783cd5a61a291cb5eb1757/cats.json';
 
     async function loadCats() {
         try {
