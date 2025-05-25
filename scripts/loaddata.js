@@ -54,20 +54,53 @@ document.addEventListener('DOMContentLoaded', function() {
                 <button class="learn-more-btn">Узнать больше</button>
             </div>
         `;
+        catCard.querySelector('.learn-more-btn').addEventListener('click', function() {
+            const modal = document.getElementById('cat-modal');
+            const modalName = modal.querySelector('.modal-name');
+            const modalAge = modal.querySelector('.modal-age');
+            const modalDescription = modal.querySelector('.modal-description');
+            const modalHistory = modal.querySelector('.modal-history');
+            const modalRequirements = modal.querySelector('.modal-requirements');
+            const modalImg = modal.querySelector('#modal-img');
+        
+           
+            modalName.textContent = cat.name;
+            modalAge.textContent = cat.age;
+            modalDescription.textContent = cat.description;
+            modalHistory.textContent = cat.history || 'Нет информации';
+            modalRequirements.textContent = cat.requirements || 'Нет информации';
+            modalImg.src = imagePath;
+        
+           
+            modal.style.display = 'block';
+        });
+        
+       
+        document.querySelector('.modal-close')?.addEventListener('click', function() {
+            document.getElementById('cat-modal').style.display = 'none';
+        });
+        
+        
+        window.addEventListener('click', function(event) {
+            const modal = document.getElementById('cat-modal');
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
         
         catsGrid.appendChild(catCard);
     });
 }
 
-    // Обработчик ошибок загрузки изображений
+    
     function handleImageError(img) {
         console.error('Не удалось загрузить изображение:', img.src);
-        img.onerror = null; // Чтобы избежать бесконечного цикла
-        img.src = 'img/no-image.jpg'; // Запасное изображение
+        img.onerror = null; 
+        img.src = 'img/no-image.jpg'; 
         img.alt = 'Изображение не найдено';
     }
 
-    // Фильтрация (без изменений)
+    
     function setupFiltering(cats) {
         filterButtons.forEach(button => {
             button.addEventListener('click', () => {

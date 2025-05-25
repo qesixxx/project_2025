@@ -10,11 +10,11 @@
     <header class="header">
             <div class="logo">Cats & Care</div>
             <nav class="nav-links">
-                <a href="#">о нас</a>
+                <a href="#about">о нас</a>
                 <a href="#">уход</a>
-                <a href="#">наши котики</a>
-                <a href="#">стать волонтером</a>
-                <a href="#">контакты</a>
+                <a href="#cats">наши котики</a>
+                <a href="#volunteer">стать волонтером</a>
+                <a href="#contacts">контакты</a>
             </nav>
     </header>
     <div class="first-block">
@@ -24,15 +24,15 @@
                 <h1 class="title-1">Спасение начинается с одного клика</h1>
                 <h2 class="title-2">Мы помогаем кошкам найти новый дом и заботливых хозяев</h2>
                 <div class="buttons-container">
-                    <a href="#" class="btn">Стать волонтером</a>
-                    <a href="#" class="btn btn-outline">Помочь финансово</a>
+                    <a href="#volunteer-form" class="btn">Стать волонтером</a>
+                    <a href="#donate" class="btn btn-outline">Помочь финансово</a>
                 </div>
             </div>
             <img src="img/главный котенок.jpeg" class="main-pic">
         </div>
     </div>
 </div>
-    <div class="second-block">
+    <div id="about" class="second-block">
     <h2 class="centered-title">О нас</h2>
     <div class="content-wrapper">
         <div class="image-section">
@@ -42,7 +42,6 @@
             <p class="section-text">Мы — команда из шести студентов, объединённых общей мечтой — сделать мир добрее и теплее для бездомных кошек. Изначально мы просто неравнодушные люди, которым больно видеть страдания животных на улице. Каждый из нас пришёл сюда со своей историей: кто-то вырос с котом дома, кто-то спас случайного котёнка на балконе, а кто-то просто не смог пройти мимо.</p>
             <p class="section-text">Объединив усилия, мы начали с малого — искали информацию о помощи животным, участвовали в волонтёрских акциях, собирали корма и вещи для приютов. Со временем поняли: можем делать больше. Сейчас мы работаем над проектом, который поможет не только спасать котиков, но и рассказывать их истории, находить добрые руки и сердца, обучать людей заботе и ответственности.</p>
             <p class="section-text">Это наш первый шаг в большой путь. Мы учимся, растём и делаем всё с любовью. Потому что верим: даже самая маленькая помощь — огромный шаг для того, чтобы чья-то жизнь стала лучше.</p>
-
         </div>
     </div>
 </div>
@@ -72,7 +71,7 @@
     </div>
 </div>
 
-<div class="fourth-block">
+<div id="cats" class="fourth-block">
     <h2 class="our-cats-title">Наши подопечные</h2>
     <div class="filter-buttons">
         <button class="filter-btn active" data-filter="all">Все</button>
@@ -81,14 +80,15 @@
         <button class="filter-btn" data-filter="special">Особенные</button>
     </div>
     <div class="cats-grid">
-        <!-- Карточки будут добавляться через JavaScript -->
+       
     </div>
+    <button class="more-btn" onclick="location.href='another-page.html'">Показать еще</button>
     <div class="error-message" style="display: none; color: red; margin-top: 20px;">
         Не удалось загрузить данные о котиках. Пожалуйста, попробуйте позже.
     </div>
 </div>
 
-<div class="fifth-block">
+<div id="volunteer" class="fifth-block">
     <h2 class="volunteer-title">Стать волонтером</h2>
     <div class="volunteer-container">
         <div class="volunteer-text">
@@ -104,14 +104,12 @@
             </ul>
         </div>
         <div class="volunteer-form-container">
-            <form class="volunteer-form">
+            <form id="volunteer-form" class="volunteer-form">
                 <h3 class="form-title">Заполнить анкету</h3>
                 <div class="form-group">
                     <input type="text" id="name" name="name" placeholder="Ваше имя" required>
                     <small class="required-info">* Это поле обязательно к заполнению</small>
                 </div>
-
-
                 <div class="form-group">
                     <input type="email" id="email" name="email" placeholder="Email" required>
                     <small class="required-info">* Это поле обязательно к заполнению</small>
@@ -128,13 +126,12 @@
                 <div id="success-message" class="success-message" style="display:none;">
                      Спасибо! Ваша заявка принята. Мы свяжемся с вами.
                 </div>
-
             </form>
         </div>
     </div>
 </div>
 
-<div class="sixth-block">
+<div id="donate" class="sixth-block">
     <h2 class="financial-title">Финансовая помощь</h2>
     <div class="financial-container">
         <div class="financial-text">
@@ -148,27 +145,44 @@
             </ul>
         </div>
         <div class="financial-donations">
+            
             <div class="donation-card">
                 <h3 class="donation-title">Разовое пожертвование</h3>
+
+    
                 <div class="donation-options">
-                    <button class="donation-option">300₽</button>
-                    <button class="donation-option">500₽</button>
-                    <button class="donation-option">1000₽</button>
-                    <button class="donation-option">Другая сумма</button>
+                    <button type="button" class="donation-option" data-amount="300">300₽</button>
+                    <button type="button" class="donation-option" data-amount="500">500₽</button>
+                    <button type="button" class="donation-option" data-amount="1000">1000₽</button>
+                    <button type="button" class="donation-option" data-amount="other">Другая сумма</button>
                 </div>
-                <button class="donate-btn">Пожертвовать</button>
+
+    
+                <form id="boostyForm" action="https://boosty.to/cats_care/donate" method="GET" target="_blank" style="display: block;">
+                <input type="hidden" name="amount" id="boostyAmount" value="300">
+                <button type="submit" class="donate-btn">Пожертвовать</button>
+                </form>
+
+
+                <div id="customAmountBlock" style="display: none; text-align: center; margin-top: 1em;">
+                     <input type="number" id="customAmount" placeholder="Введите сумму от 50₽" min="50" style="padding: 0.5em; width: 60%; border-radius: 1em; border: 1px solid #ccc; font-size: 1em; text-align: center;">
+                <br>
+                <a href="#" id="customDonateLink" class="donate-btn" style="margin-top: 1em; display: inline-block;">Пожертвовать</a>
+                </div>
             </div>
+
             <div class="donation-card">
                 <h3 class="donation-title">Регулярная помощь</h3>
                 <p class="donation-description">Подписка на ежемесячные пожертвования</p>
-                <button class="subscribe-btn">Оформить подписку</button>
+                <button class="subscribe-btn" onclick="location.href='https://boosty.to/cats_care/donate '">
+                    Оформить подписку
+                </button>
             </div>
         </div>
     </div>
 </div>
 
-
-<footer class="footer">
+<footer id="contacts" class="footer">
     <div class="footer-container">
         <div class="footer-main">
             <h3 class="footer-logo">Cats & Care</h3>
@@ -187,7 +201,7 @@
             <h4 class="footer-title">Навигация</h4>
             <ul class="footer-list">
                 <li><a href="#about" class="footer-link">О нас</a></li>
-                <li><a href="#care" class="footer-link">Уход</a></li>
+                <li><a href="#" class="footer-link">Уход</a></li>
                 <li><a href="#cats" class="footer-link">Наши котики</a></li>
                 <li><a href="#volunteer" class="footer-link">Волонтерство</a></li>
                 <li><a href="#donate" class="footer-link">Пожертвования</a></li>
@@ -223,5 +237,24 @@
 
 <script src="scripts/loaddata.js"></script>
 <script src="scripts/formscript.js"></script>
+<script src="scripts/donatescript.js"></script>
+<div id="cat-modal" class="modal">
+    <div class="modal-content">
+        <span class="modal-close">&times;</span>
+        <div class="modal-body">
+            <div class="modal-text">
+                <h2 class="modal-name"></h2>
+                <p><strong>Возраст:</strong> <span class="modal-age"></span></p>
+                <p><strong>Описание:</strong> <span class="modal-description"></span></p>
+                <p><strong>История:</strong> <span class="modal-history"></span></p>
+                <p><strong>Требования:</strong> <span class="modal-requirements"></span></p>
+            </div>
+            <div class="modal-image">
+                <img src="" alt="Фото кота" id="modal-img" />
+            </div>
+        </div>
+    </div>
+</div>
+
 </body>
 </html>
