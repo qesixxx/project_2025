@@ -1041,3 +1041,140 @@ body {
     font-weight: bold;
     padding-bottom: 0.7em;
 }
+
+.zabrat-block {
+    background-color: #f2ecec;
+    padding: 4em 7em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    color:#132436;
+}
+
+.zabrat-title {
+    font-size: 2.5em;
+    color: #132436;
+    margin-bottom: 1em;
+    text-align: center;
+    font-weight: bold;
+}
+
+.zabrat-container {
+    display: flex;
+    gap: 4em;
+    width: 100%;
+    max-width: 80em;
+}
+
+.zabrat-text {
+    flex: 0 0 40%;
+    color: #555454;
+    line-height: 1.8;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.zabrat-form-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.zabrat-form {
+    background-color: white;
+    padding: 2em;
+    border-radius: 1.5em;
+    width: 90%;
+    max-width: 50em;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+    text-align: center;
+    color: #132436;
+    margin-bottom: 1.5em;
+    font-size: 1.5em;
+}
+.form-group {
+    margin-bottom: 1.5em;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8em;
+    border: 1px solid #ddd;
+    border-radius: 0.8em;
+    font-size: 0.9em;
+    transition: border-color 0.3s ease;
+    font-weight: bold;
+}
+.form-group textarea{
+    resize: none;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #e05a29;
+}
+.order-btn {
+    width: 100%;
+    padding: 0.8em;
+    background-color: #e05a29;
+    color: white;
+    border: none;
+    border-radius: 0.8em;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.order-btn:hover {
+    background-color: #d04a19;
+}
+
+.required-info {
+    color: red; 
+    font-size: 0.8em;
+    margin-top: 0.3em;
+    display: none;
+}
+
+.form-group.error .required-info {
+    display: inline-block;
+}
+
+.success-message {
+    color: #155724;
+    padding: 1em;
+    border-radius: 0.5em;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 1.5em;
+}
+
+.paw-icon {
+    font-size: 2.5em;
+    margin-top: 1.5em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-block;
+    opacity: 0.7;
+    transform: scale(1);
+}
+
+.paw-image {
+    width: 250px;
+    height: 120px;
+}
+
+.paw-icon:hover {
+    opacity: 0.9;
+}
+
+.paw-icon:active {
+    transform: scale(1.5);
+    opacity: 1;
+    filter: drop-shadow(0 0 5px rgba(224, 90, 41, 0.7));
+}

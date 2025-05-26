@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cats&Care</title>
+    <link rel="stylesheet" href="../styles/main.css">
+</head>
+<body>
+    <header class="header">
+            <div class="logo">Cats & Care</div>
+            <nav class="nav-links">
+                <a href="#">о нас</a>
+                <a href="#">уход</a>
+                <a href="#">наши котики</a>
+                <a href="#">стать волонтером</a>
+                <a href="#">контакты</a>
+            </nav>
+    </header>
+
+<div class="fourth-block">
+    <div class="cats-grid">
+       
+    </div>
+    <div class="error-message" style="display: none; color: red; margin-top: 20px;">
+        Не удалось загрузить данные о котиках. Пожалуйста, попробуйте позже.
+    </div>
+</div>
+
+<div class="zabrat-block">
+    <h2 class="zabrat-title">Забрать котика</h2>
+    <div class="zabrat-container">
+        <div class="zabrat-text">
+            <p>Хотите забрать котика?</p>
+            <p> Оставьте заявку и мы обязательно с Вами свяжемся!</p>
+             <div class="paw-icon">
+    <img src="../img/paws.png" alt="Лапка" class="paw-image">
+</div>
+        </div>
+        <div class="zabrat-form-container">
+            <form class="zabrat-form">
+                <h3 class="form-title">Заявка</h3>
+                <div class="form-group">
+                    <input type="text" id="name" name="name" placeholder="Ваше имя" required>
+                    <small class="required-info">* Это поле обязательно к заполнению</small>
+                </div>
+                <div class="form-group">
+                    <input type="tel" id="phone" name="phone" placeholder="Телефон" required>
+                    <small class="required-info">* Это поле обязательно к заполнению</small>
+                </div>
+                
+                <button type="order" class="order-btn">Отправить</button>
+
+                <div id="success-message" class="success-message" style="display:none;">
+                     Спасибо! Ваша заявка принята. Мы свяжемся с вами как можно скорее.
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-main">
+            <h3 class="footer-logo">Cats & Care</h3>
+            <p class="footer-description">Волонтерская организация помощи бездомным кошкам</p>
+            <div class="footer-social-icons">
+                <a href="#" target="_blank" class="footer-social-link">
+                    <img src="../img/вк.png" alt="VK" class="footer-social-img">
+                </a>
+                <a href="#" target="_blank" class="footer-social-link">
+                    <img src="../img/инст.png" alt="Instagram" class="footer-social-img">
+                </a>
+            </div>
+        </div>
+        <div class="footer-column footer-nav">
+            <h4 class="footer-title">Навигация</h4>
+            <ul class="footer-list">
+                <li><a href="#about" class="footer-link">О нас</a></li>
+                <li><a href="#care" class="footer-link">Уход</a></li>
+                <li><a href="#cats" class="footer-link">Наши котики</a></li>
+                <li><a href="#volunteer" class="footer-link">Волонтерство</a></li>
+                <li><a href="#donate" class="footer-link">Пожертвования</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column-spacer"></div>
+
+        <div class="footer-column footer-contacts">
+            <h4 class="footer-title">Контакты</h4>
+            <ul class="footer-list">
+                <li class="footer-contact-item">
+                    <img src="../img/телефон.png" alt="Телефон" class="footer-contact-icon">
+                    +7(123)456-78-90
+                </li>
+                <li class="footer-contact-item">
+                    <img src="../img/конверт.png" alt="Email" class="footer-contact-icon">
+                    cat@pomosh.com
+                </li>
+                <li class="footer-contact-item">
+                    <img src="../img/gps.png" alt="Адрес" class="footer-contact-icon">
+                    г.Казань, ул.Кошачья, 35
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="footer-divider"></div>
+        <p class="footer-copyright">© 2025 Cats & Care. Все права защищены.</p>
+    </div>
+</footer>
+
+<script src="../scripts/loaddata.js"></script>
+<script src="../scripts/formscript.js"></script>
+</body>
+</html>
