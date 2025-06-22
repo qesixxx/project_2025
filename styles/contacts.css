@@ -21,8 +21,13 @@ html::-webkit-scrollbar {
 }
 
 body {
-    overflow-y: auto; 
-    
+    overflow-y: auto;
+    background-color: #555454; 
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
 }
 @media (prefers-reduced-motion: reduce) {
     html {
@@ -93,6 +98,7 @@ header {
     width: 100%; 
     box-sizing: border-box;
     justify-content: center;
+    flex:1;
 }
 
 .content-text {
@@ -208,6 +214,7 @@ header {
     padding: 0em 7em 0;
     width: 100%;
     box-sizing: border-box;
+   
 }
 
 .footer-container {
@@ -233,4 +240,218 @@ header {
 .footer-copyright {
     font-size: 0.8em;
     color: #f2ecec;
+}
+
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 2em;
+    height: 1.3em;
+    cursor: pointer;
+}
+
+.burger-line {
+    height: 0.2em;
+    width: 100%;
+    background-color: #77b7f7;;
+    
+    transition: all 0.3s ease;
+}
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 300px;
+    height: 100vh;
+    background: white;
+    z-index: 1000;
+    transition: right 0.4s ease;
+    padding: 20px;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+}
+
+.mobile-menu.active {
+    right: 0;
+}
+
+.mobile-menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.mobile-menu .logo {
+    color: #77b7f7;
+    font-size: 1.2em;
+    text-decoration: none !important; 
+    border-bottom: none !important; 
+    background-image: none !important; 
+}
+
+.close-btn {
+    font-size: 3em;
+    cursor: pointer;
+    color: #77b7f7;
+    line-height: 1;
+
+}
+
+.mobile-nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.mobile-nav-links a {
+    color: #132436;
+    text-decoration: none;
+    font-size: 0.95em;
+    padding: 5px 0;
+    transition: color 0.3s;
+    font-weight: 400;
+}
+
+.mobile-nav-links a:hover {
+    color: #77b7f7;
+}
+
+
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.burger-menu.active .burger-line:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.burger-menu.active .burger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-menu.active .burger-line:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+
+@media (max-width: 768px) {
+    header {
+        padding: 1.5em;
+        position: relative;
+    }
+    
+    .logo {
+        font-size: 1.2em;
+    }
+    
+    .nav-links {
+        display: none;
+    }
+    
+    .burger-menu {
+        display: flex;
+    }
+    
+    .main-block {
+        flex-direction: column;
+        padding: 1.5em;
+        padding-top: 4em;
+    }
+    
+    .content-text, .map-section {
+        max-width: 100%;
+    }
+    
+    
+    .map-section.desktop-only {
+        display: none;
+    }
+    
+    
+    .map-section.mobile-first {
+        display: block;
+        order: -1;
+        width: 100%;
+        margin-bottom: 2em;
+    }
+    
+    .map-container {
+        aspect-ratio: 1/0.9;
+    }
+    
+    h1 {
+        font-size: 1.8em;
+        text-align: center;
+        margin-bottom: 0.5em;
+    }
+    
+    .map-title {
+        display: none;
+    }
+    
+    .work-hours h2 {
+        margin-top: 1em;
+        font-size: 1.2em;
+    }
+    
+    .footer {
+        padding: 0 1.5em;
+    }
+}
+
+@media (min-width: 769px) {
+    .map-section.mobile-first {
+        display: none;
+    }
+    
+    .map-section.desktop-only {
+        display: block;
+    }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+    header {
+        flex-wrap: wrap; 
+        padding: 1em;
+    }
+    
+    .logo {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 0.5em;
+    }
+    
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+        gap: 1em;
+        flex-wrap: wrap;
+    }
+    
+    .nav-links a {
+        padding: 0.3em 0.5em;
+        font-size: 0.85em;
+    }
+    
+    .burger-menu {
+        display: none; 
+    }
 }

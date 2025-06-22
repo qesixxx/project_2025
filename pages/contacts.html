@@ -11,13 +11,40 @@
             <div class="logo">Cats & Care</div>
             <nav class="nav-links">
                 <a href="../index.html#about">о нас</a>
-                <a href="../care.html">уход</a>
+                <a href="care.html">уход</a>
                 <a href="../index.html#cats">наши котики</a>
                 <a href="../index.html#volunteer">стать волонтером</a>
                 <a href="#">контакты</a>
             </nav>
+            <div class="burger-menu">
+                <div class="burger-line"></div>
+                <div class="burger-line"></div>
+                <div class="burger-line"></div>
+            </div>
+            <div class="mobile-menu">
+                <div class="mobile-menu-header">
+                <div class="logo">Cats & Care</div>
+                <div class="close-btn">×</div>
+            </div>
+            <nav class="mobile-nav-links">
+                <a href="../index.html#about">о нас</a>
+                <a href="care.html">уход</a>
+                <a href="../index.html#cats">наши котики</a>
+                <a href="../index.html#volunteer">стать волонтером</a>
+                <a href="#">контакты</a>
+            </nav>
+            </div>
     </header>
     <div class="main-block">
+        <div class="map-section mobile-first">
+        <div class="map-container">
+            <iframe 
+                src="https://yandex.ru/map-widget/v1/?text= Казань%2C+ул.+Кремлёвская%2C+35&z=16"
+                allowfullscreen="" style="border: none;">
+            </iframe>
+        </div>
+    </div>
+
     <div class="content-text">
         <h1>Cats & Care</h1>
         <p class="slogan">Волонтерская организация помощи бездомным кошкам</p>
@@ -60,12 +87,12 @@
         </div>
     </div>
 
-    <div class="map-section">
+    <div class="map-section desktop-only">
         <h2 class="map-title">Контакты</h2>
         <div class="map-container">
             <iframe 
                 src="https://yandex.ru/map-widget/v1/?text= Казань%2C+ул.+Кремлёвская%2C+35&z=16"
-                allowfullscreen=""style="border: none;">
+                allowfullscreen="" style="border: none;">
             </iframe>
         </div>
     </div>
@@ -78,5 +105,6 @@
         <p class="footer-copyright">© 2025 Cats & Care. Все права защищены.</p>
     </div>
     </footer>
+    <script src="../scripts/open-mobile-menu.js"></script>
 </body>
 </html>
