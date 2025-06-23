@@ -10,17 +10,51 @@
     <header class="header">
             <div class="logo">Cats & Care</div>
             <nav class="nav-links">
-                <a href="#">о нас</a>
-                <a href="#">уход</a>
-                <a href="#">наши котики</a>
-                <a href="#">стать волонтером</a>
-                <a href="#">контакты</a>
-            </nav>
-            
-    </header>
-
-<div class="fourth-block">
-    <div class="cats-grid">
+        <a href="../index.html#about">о нас</a>
+        <a href="../pages/care.html">уход</a>
+        <a href="../index.html#cats">наши котики</a>
+        <a href="../index.html#volunteer">стать волонтером</a>
+        <a href="contacts.html">контакты</a>
+    </nav>
+    <div class="burger-menu">
+        <div class="burger-line"></div>
+        <div class="burger-line"></div>
+        <div class="burger-line"></div>
+    </div>
+</header>
+    
+<div class="mobile-menu">
+    <div class="mobile-menu-header">
+        <div class="logo">Cats & Care</div>
+        <div class="close-btn">×</div>
+    </div>
+    <nav class="mobile-nav-links">
+        <a href="#about">о нас</a>
+        <a href="pages/care.html">уход</a>
+        <a href="#cats">наши котики</a>
+        <a href="#volunteer">стать волонтером</a>
+        <a href="contacts.html">контакты</a>
+    </nav>
+</div>
+    
+<div id="cats" class="fourth2-block">
+    <h2 class="our-cats-title">Наши подопечные</h2>
+    <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">Все</button>
+        <button class="filter-btn" data-filter="adult">Взрослые</button>
+        <button class="filter-btn" data-filter="kitten">Котята</button>
+        <button class="filter-btn" data-filter="special">Особенные</button>
+    </div>
+    <div class="cats-grid2">
+       
+    </div>
+    <div class="error-message" style="display: none; color: red; margin-top: 20px;">
+        Не удалось загрузить данные о котиках. Пожалуйста, попробуйте позже.
+    </div>
+</div>
+    
+<div class="fourth2-block">
+    <div class="cats-grid2">
        
     </div>
     <div class="error-message" style="display: none; color: red; margin-top: 20px;">
@@ -113,7 +147,25 @@
     </div>
 </footer>
 
-<script src="../scripts/loaddata.js"></script>
-<script src="../scripts/formscript.js"></script>
+<script src="../scripts/loaddata2.js"></script>
+<script src="scripts/formscript.js"></script>
+<div id="cat-modal" class="modal">
+    <div class="modal-content">
+        <span class="modal-close">&times;</span>
+        <div class="modal-body">
+            <div class="modal-text">
+                <h2 class="modal-name"></h2>
+                <p><strong>Возраст:</strong> <span class="modal-age"></span></p>
+                <p><strong>Описание:</strong> <span class="modal-description"></span></p>
+                <p><strong>История:</strong> <span class="modal-history"></span></p>
+                <p><strong>Требования:</strong> <span class="modal-requirements"></span></p>
+            </div>
+            <div class="modal-image">
+                <img src="" alt="Фото кота" id="modal-img" />
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/scripts/open-mobile-menu.js"></script>
 </body>
 </html>
